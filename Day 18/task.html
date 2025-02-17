@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 1000px;
+            height: 400px;
+            margin: 50px auto;
+            border: 2px solid red;
+            position: relative;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            position: absolute;
+            transition: 1s;
+            color: white;
+            font-size: 60px;
+        }
+
+        .box:nth-child(1) {
+            left: 0;
+            top: 0;
+        }
+
+        .box:nth-child(2) {
+            left: 900px;
+            top: 0;
+        }
+
+        .container:hover .box:nth-child(1) {
+            left: 400px;
+            top: 100px;
+        }
+
+        .container:hover .box:nth-child(2){
+            left: 500px;
+            top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+
+    </div>
+
+</body>
+
+</html>

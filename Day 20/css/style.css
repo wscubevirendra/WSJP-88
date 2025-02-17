@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Assistant", serif;
+
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, .05);
+    background-color: #fff;
+
+}
+
+.header_container {
+    width: 1200px;
+    height: 100%;
+    /* border: 2px solid red; */
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+
+.logo {
+    width: 52px;
+    height: 36px;
+
+    background-image: url("../images/MyntraWebSprite_27_01_2021.png");
+    background-position: -462px 0;
+    background-size: 1404px 105px;
+}
+
+nav {
+    width: 515px;
+    height: 80px;
+    /* border: 1px solid green; */
+
+
+}
+
+nav ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    align-items: center;
+    font-size: 14px;
+    letter-spacing: .3px;
+    color: #282c3f;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.search_box {
+    width: 320px;
+    height: 40px;
+    /* border: 2px solid red; */
+    background-color: #f5f5f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    font-size: 12px;
+    border-radius: 0 4px 4px 0;
+}
+
+.search_box input {
+    width: 100%;
+    border: none;
+    background: transparent;
+    outline: none;
+}
+
+.profile_section {
+    width: 194px;
+    height: 40px;
+    /* border: 2px solid red; */
+    display: flex;
+
+}
+
+.icon_text_setup {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 12px;
+    gap: 2px;
+
+}
+
+.mega_menu {
+    width: 100%;
+    height: 200px;
+    /* background-color: hotpink; */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+    display: flex;
+    box-shadow: 2px 2px 2px gray;
+    padding: 10px;
+
+}
+
+.menu_item{
+    border: 2px solid red;
+    flex-grow: 1;
+}
+
+.first_menu:hover .mega_menu {
+    opacity: 1;
+    visibility: visible;
+}

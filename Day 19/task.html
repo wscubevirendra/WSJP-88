@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            width: 100%;
+            height: 82px;
+            background-color: white;
+            box-shadow: 2px 2px 2px gray;
+            display: flex;
+        }
+
+        header ul {
+            list-style: none;
+            flex-grow: 1;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            gap: 100px;
+            padding: 0px 100px 0px 0px;
+            font-size: 25px;
+            position: relative;
+        }
+
+        ul li {
+            /* border: 2px solid red; */
+            height: 100%;
+            padding: 20px;
+            cursor: pointer;
+
+        }
+
+       
+
+        ul li:nth-child(3):hover .mega_menu {
+            top: 80px;
+            left: 0;
+            opacity: 1;
+            visibility: visible;
+           
+        }
+
+        .mega_menu {
+            width: 100%;
+            height: 200px;
+            /* border: 2px solid green; */
+            position: absolute;
+            top: 80px;
+            left: 0;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            display: flex;
+            justify-content: space-between;
+           
+            gap: 20px;
+            transition: 1s;
+            /* opacity: 0;
+            visibility: hidden; */
+            
+        }
+
+        .mega_menu>div {
+            border: 2px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img width="102px" src="https://images.indianexpress.com/2021/01/myntra.png" alt="">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Services
+                <div class="mega_menu">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </li>
+            <li>Contact</li>
+        </ul>
+
+    </header>
+
+</body>
+
+</html>
