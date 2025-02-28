@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            background: #070721;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main {
+
+            display: flex;
+            gap: 50px;
+        }
+
+        .p {
+            width: 20px;
+            height: 250px;
+            background-color: green;
+            animation: myanimation 4s  infinite linear;
+        }
+
+        .p:nth-child(1) {
+            background-color: orange;
+            animation-duration: 2s;
+        }
+
+        .p:nth-child(2) {
+            background-color: lightblue;
+            animation-duration: 1s;
+
+        }
+
+        .p:nth-child(3) {
+            background-color: yellow;
+            animation-duration: 3s;
+
+        }
+
+        .p:nth-child(4) {
+            background-color: green;
+            animation-duration: 4s;
+
+        }
+
+        .p:nth-child(5) {
+            background-color: teal;
+            animation-duration: 2s;
+
+        }
+
+        @keyframes myanimation{
+            0%{
+                transform: scaleY(1);
+            }
+            50%{
+                transform: scaleY(1.5);
+            }
+            100%{
+                transform: scaleY(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="p"></div>
+        <div class="p"></div>
+        <div class="p"></div>
+        <div class="p"></div>
+        <div class="p"></div>
+
+    </div>
+
+</body>
+
+</html>

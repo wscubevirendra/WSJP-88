@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        button {
+            background: brown;
+            padding: 10px 25px;
+            color: white;
+            margin: 100px;
+            border: none;
+            border-radius: 10px;
+            position: relative;
+
+        }
+
+        .back {
+            width: 100%;
+            height: 100%;
+            background: brown;
+            opacity: 0.6;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            border-radius: 10px;
+            animation: wave 2s infinite linear;
+        }
+
+        @keyframes wave {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(2);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <button>
+        Enquire Now
+        <div class="back">
+
+        </div>
+    </button>
+
+</body>
+
+</html>

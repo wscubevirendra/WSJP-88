@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .card {
+            width: 300px;
+            height: 300px;
+            box-shadow: 1px 1px 2px 1px gray;
+            background-color: white;
+            margin: 50px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+            font-weight: bold;
+            transition: 600ms;
+            transform-style: preserve-3d;
+        }
+
+        h1 {
+            transition-delay: 300ms;
+            transition: 1s;
+            text-shadow: 2px 2px 2px red;
+
+        }
+
+        .card:hover {
+            transform: rotateY(80deg);
+        }
+
+        .card:hover h1 {
+            transform: translateZ(120px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <h1>Hello</h1>
+
+    </div>
+
+</body>
+
+</html>

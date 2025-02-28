@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        .container {
+            width: 1000px;
+            height: 500px;
+            border: 2px solid green;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .box {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            animation-name: race;
+            animation-duration: 10s;
+            animation-delay: 5s;
+            animation-iteration-count: infinite;
+            color: white;
+        }
+
+        @keyframes race {
+
+            0%,
+            100% {
+                transform: translateX(0px);
+
+            }
+
+            50% {
+                transform: translateX(950px);
+
+            }
+
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div style="animation-timing-function: ease;" class="box">ease</div>
+        <div style="animation-timing-function: ease-in;" class="box">ease-in</div>
+        <div style="animation-timing-function: ease-in-out;" class="box">ease-in-out</div>
+        <div style="animation-timing-function: ease-out;" class="box">ease-out</div>
+        <div style="animation-timing-function: linear;" class="box">linear</div>
+
+    </div>
+
+</body>
+
+</html>
