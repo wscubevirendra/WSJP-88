@@ -1,0 +1,103 @@
+<html>
+<script>
+
+    // //Decleration
+    // function demo(name) {
+    //     console.log(`Hello ${name}`)  //Defination
+    // }
+
+
+    // //function calling
+    // demo("Yogesh");  
+    // demo("Bhawani Shanakar");
+    // demo("Akshay ");
+
+
+    // function addTwoNumber(a, b) {
+    //     return
+    //      a + b
+
+    // }
+    // var result = addTwoNumber(10, 20)  //30
+    // console.log(result)
+
+
+    // function calculator(a, b, sign) {
+    //     var result;
+    //     if (sign == "+") {
+    //         result = a + b
+
+    //     } else if (sign == "-") {
+    //         result = a - b
+
+    //     } else if (sign == "*") {
+    //         result = a * b
+
+    //     } else if (sign == "/") {
+    //         result = a / b
+
+
+    //     } else {
+    //         result = a % b
+
+    //     }
+
+    //    console.log(result)
+
+    // }
+
+    // calculator("", 40, "*")
+
+
+    //     function ArrayReverse(array) {
+    //         var newArr = [];
+    //         for (var i = array.length - 1; i >= 0; i--) {
+    //             newArr.push(array[i])
+
+    //         }
+    //         return newArr
+
+    //     }
+
+    //     var result1 = ArrayReverse([10, 20, 30, 40, 50])
+    //     console.log(result1)
+    //    console.log( ArrayReverse([1, 2, 3, 4, 5, 6, 7]))
+
+
+    function quadrant(x, y) {
+        var result;
+        if (x > 0 && y > 0) {
+            result = "I"
+
+        } else if (x < 0 && y > 0) {
+            result = "II"
+
+        } else if (x < 0 && y < 0) {
+            result = "II"
+
+        } else if (x > 0 && y < 0) {
+            result = "IV"
+
+        } else if (x != 0 && y == 0) {
+            result = "A-xis"
+
+        } else if (x == 0 && y != 0) {
+            result = "Y-xis"
+
+        } else {
+            result = "orgin"
+        }
+        console.log(result)
+
+    }
+
+    quadrant(-10, 20)
+    quadrant(10, -20)
+    quadrant(20, 0)
+
+
+
+
+</script>
+
+</html>
