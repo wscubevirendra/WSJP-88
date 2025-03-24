@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document</title>
+    <style>
+        #box {
+            width: 300px;
+            height: 300px;
+            border: 2px solid red;
+        }
+
+        .demo{
+            background-color: red;
+            color: white;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div  id="box">
+        WsCube Tech
+    </div>
+    <button onclick="addBg()">Add</button>
+    <button onclick="removeBg()">Remove</button>
+    <button onclick="toggleHandler()">Toggle</button>
+
+    <script>
+        var box = document.getElementById("box");
+        function addBg() {
+            
+            box.classList.add("demo")
+
+        }
+
+        function removeBg() {
+           box.classList.remove("demo")
+        }
+
+        function toggleHandler(){
+            box.classList.toggle("demo")
+        }
+
+    </script>
+
+</body>
+
+</html>

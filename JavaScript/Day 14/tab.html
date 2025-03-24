@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .accordion {
+            width: 600px;
+            /* height: 400px; */
+            box-shadow: 0px 4px 5px gray;
+            margin: 50px auto;
+            padding: 16px;
+        }
+
+        .buttons {
+            text-align: start;
+            width: 100%;
+            background-color: lightseagreen;
+            border: none;
+            outline: none;
+            padding: 6px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .content {
+            margin: 6px 0px;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            padding: 0px;
+            /* background-color: red; */
+            text-align: justify;
+            transition: 0.6s;
+            display: none;
+        }
+
+        .show{
+            display: block;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body>
+    <button class="buttons">Section1</button>
+    <button class="buttons">Section2</button>
+    <button class="buttons">Section3</button>
+    <button class="buttons">Section4</button>
+    <div class="accordion">
+        <div class="content show">
+            <h1>section 1</h1>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem commodi aperiam doloribus harum,
+            deleniti ratione sapiente iure totam est porro animi iusto id? Impedit aliquid pariatur laboriosam
+            asperiores ab officia?
+        </div>
+        <div class="content">
+            <h1>section 1</h1>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem commodi aperiam doloribus harum,
+            deleniti ratione sapiente iure totam est porro animi iusto id? Impedit aliquid pariatur laboriosam
+            asperiores ab officia?
+        </div>
+        <div class="content">
+            <h1>section 2</h1>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem commodi aperiam doloribus harum,
+            deleniti ratione sapiente iure totam est porro animi iusto id? Impedit aliquid pariatur laboriosam
+            asperiores ab officia?
+        </div>
+        <div class="content">
+            <h1>section 4</h1>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem commodi aperiam doloribus harum,
+            deleniti ratione sapiente iure totam est porro animi iusto id? Impedit aliquid pariatur laboriosam
+            asperiores ab officia?
+        </div>
+
+
+    </div>
+    <script>
+
+//Greeting card
+//Image gallery
+//Tudo List
+//Notes App
+//Slider----class upload
+//Color picker
+//Digital Watch
+//Form Validation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        var buttons = document.querySelectorAll(".buttons");
+        var content = document.querySelectorAll(".content");
+
+        
+
+        buttons.forEach(
+            function (button, index) {
+                button.addEventListener(
+                    "click",
+                    function () {
+                        buttons.forEach(
+                            function (btn, i) {
+                                if(i==index){
+                                    content[i].classList.add("show");
+                                 
+                                }else{
+                                    content[i].classList.remove("show");
+
+                                }
+                            }
+                        )
+                    }
+                )
+            }
+        )
+
+
+    </script>
+
+</body>
+
+</html>

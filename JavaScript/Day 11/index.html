@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .parent {
+            width: 1000px;
+            height: 500px;
+            margin: 20px auto;
+            /* border: 2px solid red; */
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        .container {
+            width: 48%;
+            height: 100%;
+            border: 2px double green;
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            gap: 20px;
+            background-size: cover;
+            font-size: 16px;
+        }
+
+
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+        }
+
+        label {
+            display: block;
+        }
+
+        .font {
+            display: flex;
+            gap: 20px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="container">
+            <div>
+                <label for="">To</label>
+                <input onkeyup="greetingCart(this,0)" type="text" class="inp">
+            </div>
+            <div>
+                <label for="">From</label>
+                <input onkeyup="greetingCart(this,1)" type="text" class="inp">
+            </div>
+            <div>
+                <label for="">Msg</label>
+                <textarea onkeyup="greetingCart(this,2)" class="inp"></textarea>
+            </div>
+            <div>
+                <label for="">Background image </label>
+                <input onchange="BgHandler(this.value)" type="text" class="inp">
+            </div>
+            <div>
+                <label for=""> Color </label>
+                <input onchange="colorHandler(this.value)" type="color" class="inp">
+            </div>
+            <div class="font">
+                <label for=""> Font </label>
+
+                <button onclick="fontSizeHandler(1)">+</button>
+                <input id="fontInp" value="16" type="text" class="inp">
+                <button onclick="fontSizeHandler(2)">-</button>
+            </div>
+
+        </div>
+        <div class="container">
+            <h3 class="output">To:-</h3>
+            <h4 class="output">From:-</h4>
+            <p class="output">Message:-</p>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        var output = document.getElementsByClassName("output");
+        var container = document.getElementsByClassName("container");
+        var fontInp = document.getElementById("fontInp")
+
+        function greetingCart(inp, flag) {
+            var message;
+            if (flag == 0) {
+                message = "To"
+            } else if (flag == 1) {
+                message = "From"
+            } else if (flag == 2) {
+                message = "Message"
+            }
+
+
+            output[flag].innerText = `${message}:-${inp.value}`
+
+        }
+
+        function BgHandler(path) {
+            container[1].style.background = `url(${path})`
+
+        }
+
+        function colorHandler(code) {
+            container[1].style.color = code
+
+        }
+
+        var font = 16;
+        function fontSizeHandler(flag) {
+            console.log(flag)
+            if (flag == 1) {
+                font++
+            } else {
+                font--
+            }
+
+            container[1].style.fontSize = font + "px"
+            fontInp.value = font
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>

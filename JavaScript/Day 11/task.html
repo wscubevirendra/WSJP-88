@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        .box {
+            padding: 4px;
+            background-color: red;
+            margin-top: 10px;
+            font-size: 25px;
+            cursor: pointer;
+        }
+
+        h1 {
+            font-size: 50px;
+            margin-top: 50px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div onclick="demo(this)" class="box">1</div>
+    <div onclick="demo(this)" class="box">2</div>
+    <div onclick="demo(this)" class="box">3</div>
+    <div onclick="demo(this)" class="box">4</div>
+    <div onclick="demo(this)" class="box">5</div>
+    <div onclick="demo(this)" class="box">6</div>
+    <div onclick="demo(this)" class="box">7</div>
+    <div onclick="demo(this)" class="box">8</div>
+    <h1 id="heading">0</h1>
+
+    <script>
+
+        var heading = document.getElementById("heading");
+
+        function demo(box) {
+            heading.innerText = box.innerText
+
+        }
+    </script>
+
+</body>
+
+</html>

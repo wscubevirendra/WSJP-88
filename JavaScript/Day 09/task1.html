@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        .container {
+            width: 300px;
+            height: 200px;
+            padding: 10px;
+            box-shadow: 0px 0px 1px 1px gray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            margin: 50px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <button class="btn" onclick="incHandler()">+</button>
+        <h1 id="display">0</h1>
+        <button class="btn" disabled onclick="decHandler()">-</button>
+    </div>
+
+    <script>
+        var display = document.getElementById("display");
+        var btn=document.getElementsByClassName("btn");
+
+        var count = 0;
+        function incHandler() {
+            if (count >= 10) return
+            count++;
+            display.innerText = count;
+            btn[1].disabled=false
+        }
+
+
+        function decHandler() {
+            if (count == 0) return
+            count--;
+            display.innerText = count;
+        }
+    </script>
+</body>
+
+</html>

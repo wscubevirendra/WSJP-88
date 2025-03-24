@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" onkeyup="demo(event)" id="myinp">
+    <h1 id="heading"></h1>
+    <!-- <button oncontextmenu="demo(event)">Click</button> -->
+
+    <script>
+        var heading = document.getElementById("heading");
+        var myinp = document.getElementById("myinp");
+
+        function demo(event) {
+        //    console.log(event)
+           if(event.key=="ArrowRight"){
+            heading.innerText =myinp.value;
+           }
+        }
+
+    </script>
+</body>
+
+</html>

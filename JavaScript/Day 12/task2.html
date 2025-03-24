@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Add</button>
+    <div id="box1">
+        box1
+    </div>
+
+    <script>
+        var box1=document.querySelector("#box1");
+        var btn=document.querySelector("#btn");
+        // function demo(){
+        //     box1.innerText="Box2"
+
+        // }
+
+        btn.addEventListener(
+            "click",
+            function (){
+                box1.innerHTML="<i>box2</i>"
+            }
+        )
+
+
+    </script>
+    
+</body>
+</html>

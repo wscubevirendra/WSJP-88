@@ -37,7 +37,8 @@
 
 <body>
     <header>
-        <i onclick="menuOpen()" class="fa-solid fa-bars"></i>
+        <i onclick="menuOpen()" id="menubar" class="fa-solid fa-bars"></i>
+        <i onclick="closemenu()" style="display: none;" id="xmark" class="fa-solid fa-xmark"></i>
         <nav id="menu">
 
         </nav>
@@ -46,8 +47,20 @@
 
     <script>
         var menu = document.getElementById("menu");
+        var menubar=document.getElementById("menubar");
+        var xmark=document.getElementById("xmark");
+
+        
         function menuOpen() {
-            menu.style.right = "0%"
+            menu.style.right = "0%";
+            xmark.style.display="block";
+            menubar.style.display="none"
+        }
+
+        function closemenu(){
+            menu.style.right="-100%";
+            xmark.style.display="none";
+            menubar.style.display="block"
         }
     </script>
 

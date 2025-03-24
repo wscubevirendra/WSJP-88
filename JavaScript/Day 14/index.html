@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .accordion {
+            width: 600px;
+            /* height: 400px; */
+            box-shadow: 0px 4px 5px gray;
+            margin: 50px auto;
+            padding: 16px;
+        }
+
+        .buttons {
+            text-align: start;
+            width: 100%;
+            background-color: lightseagreen;
+            border: none;
+            outline: none;
+            padding: 6px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .content {
+            margin: 6px 0px;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            padding: 0px;
+            /* background-color: red; */
+            text-align: justify;
+            height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: 0.6s;
+        }
+
+        .show {
+            height: auto;
+            padding: 10px;
+            opacity: 1;
+        }
+
+        .buttons i{
+            position: absolute;
+            right: 10px;
+            color: white;
+            font-size: 23px;
+        }
+
+        .icons_rotate{
+            transform: rotate(180deg);
+            transition: 0.5s;
+        }
+        
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+</head>
+
+<body>
+    <div class="accordion">
+        <div>
+            <button class="buttons">Do I need to create an account on the redBus site to book my bus ticket?<i class="fa-solid fa-caret-up icons_rotate "></i></button>
+            <p class="content show ">
+                No, you don’t have to create an account on the redBus site to book your bus ticket. But it is advisable
+                to make one to accelerate the process next time you want to book bus tickets. Also, redBus has many
+                discounts and offers that you can easily access if you have an account with us.
+            </p>
+        </div>
+        <div>
+            <button class="buttons">
+                What's New in Bus Booking on redBus?
+               <i class="fa-solid fa-caret-up"></i>
+            </button>
+            <p class="content">
+                Primo Bus Ticket: redBus has launched Primo bus services, where passengers can enjoy travelling in
+                high-rated buses with best-in-class services. While looking for bus tickets on the desired route,
+                customers can check the Primo tag to choose this excellent service. From hygiene standards to on-time
+                service and comfort, passengers can benefit from the online bus booking experience from Primo buses.
+
+
+
+            </p>
+        </div>
+        <div>
+            <button class="buttons">
+                Does bus booking online cost me more?
+               <i class="fa-solid fa-caret-up"></i>
+            </button>
+            <p class="content">
+                Not at all! The bus ticket price is the same as you would get from the bus operator/ counter of any bus
+                ticket agency. redbus reduces the travel budget by comparing the bus ticket prices among various
+                operators, making it a more cost-effective choice. Therefor
+            </p>
+        </div>
+        <div>
+            <button class="buttons">Does bus booking online cost me more?
+               <i class="fa-solid fa-caret-up"></i>
+            </button>
+            <p class="content">
+                Not at all! The bus ticket price is the same as you would get from the bus operator/ counter of any bus
+                ticket agency. redbus reduces the travel budget by comparing the bus ticket prices among various
+                operators, making it a more cost-effective choice. Therefor
+            </p>
+        </div>
+
+    </div>
+    <script>
+        var buttons = document.querySelectorAll(".buttons");
+        var content = document.querySelectorAll(".content");
+        var icons=document.querySelectorAll(".buttons i");
+        
+
+        buttons.forEach(
+            function (button, index) {
+                button.addEventListener(
+                    "click",
+                    function () {
+                        buttons.forEach(
+                            function (btn, i) {
+                                if(i==index){
+                                    content[i].classList.add("show");
+                                    icons[i].classList.add("icons_rotate");
+                                }else{
+                                    content[i].classList.remove("show");
+                                    icons[i].classList.remove("icons_rotate");
+
+                                }
+                            }
+                        )
+                    }
+                )
+            }
+        )
+
+
+    </script>
+
+</body>
+
+</html>
