@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 300px;
+            height: 100px;
+            box-shadow: 0px 2px 3px gray;
+            background-color: white;
+            margin: 30px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            font-size: 35px;
+
+        }
+
+        button {
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <button class="btn">Start</button>
+        <h1 id="display">0</h1>
+        <button disabled="true" class="btn">Stop</button>
+    </div>
+
+    <script>
+        var display = document.querySelector("#display");
+        var btn = document.querySelectorAll(".btn");
+        var mytiming_function;
+        var count = 0;
+        btn[0].addEventListener(
+            "click",
+            function () {
+                mytiming_function = setInterval(
+                    function () {
+                        count++;
+                        display.innerText = count;
+                        btn[0].disabled = true
+                        btn[1].disabled = false
+                    },
+                    1000
+                )
+
+            }
+        )
+
+        btn[1].addEventListener(
+            "click",
+            function () {
+                clearInterval(mytiming_function)
+                btn[0].disabled=false;
+                btn[1].disabled=true;
+            }
+        )
+
+    </script>
+
+</body>
+
+</html>

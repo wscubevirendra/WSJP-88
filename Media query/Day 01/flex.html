@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container-fluid{
+            width: 100%;
+            background-color: blue;
+        }
+
+        .container {
+            max-width: 1300px;
+            /* height: 100px; */
+            padding: 16px;
+            /* border: 2px solid red; */
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+
+        }
+
+        .card {
+            width: calc(25% - 16px);
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            padding: 16px;
+            background-color: lightblue;
+
+        }
+
+        @media (min-width:0px) and (max-width:576px) {
+            .card {
+                flex: 1 1 calc(100% - 16px);
+            }
+
+        }
+
+        @media (min-width:577px) and (max-width:768px) {
+            .card {
+                flex: 1 1 calc(50% - 16px);
+            }
+        }
+
+        @media (min-width:769px) and (max-width:1024px) {
+            .card {
+                flex: 1 1 calc(33.33% - 16px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="container">
+            <div class="card">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui magnam, tempore saepe consequatur voluptatibus
+                accusantium repudiandae? Odit veniam labore possimus. Ducimus iure veritatis illo nesciunt, in harum
+                praesentium vel tempora.
+            </div>
+            <div class="card">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui magnam, tempore saepe consequatur voluptatibus
+                accusantium repudiandae? Odit veniam labore possimus. Ducimus iure veritatis illo nesciunt, in harum
+                praesentium vel tempora.
+            </div>
+            <div class="card">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui magnam, tempore saepe consequatur voluptatibus
+                accusantium repudiandae? Odit veniam labore possimus. Ducimus iure veritatis illo nesciunt, in harum
+                praesentium vel tempora.
+            </div>
+            <div class="card">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui magnam, tempore saepe consequatur voluptatibus
+                accusantium repudiandae? Odit veniam labore possimus. Ducimus iure veritatis illo nesciunt, in harum
+                praesentium vel tempora.
+            </div>
+            <div class="card">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui magnam, tempore saepe consequatur voluptatibus
+                accusantium repudiandae? Odit veniam labore possimus. Ducimus iure veritatis illo nesciunt, in harum
+                praesentium vel tempora.
+            </div>
+            <div class="card">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui magnam, tempore saepe consequatur voluptatibus
+                accusantium repudiandae? Odit veniam labore possimus. Ducimus iure veritatis illo nesciunt, in harum
+                praesentium vel tempora.
+            </div>
+            <div class="card">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui magnam, tempore saepe consequatur voluptatibus
+                accusantium repudiandae? Odit veniam labore possimus. Ducimus iure veritatis illo nesciunt, in harum
+                praesentium vel tempora.
+            </div>
+            <div class="card">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui magnam, tempore saepe consequatur voluptatibus
+                accusantium repudiandae? Odit veniam labore possimus. Ducimus iure veritatis illo nesciunt, in harum
+                praesentium vel tempora.
+            </div>
+        </div>
+    </div>
+   
+</body>
+
+</html>

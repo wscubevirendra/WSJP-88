@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        form {
+            width: 400px;
+            height: 300px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            background-color: white;
+            margin: 50px auto;
+            padding: 16px;
+        }
+
+        label {
+            display: block;
+        }
+
+        input {
+            width: 100%;
+            margin-top: 10px;
+            padding: 2px;
+            outline: none;
+        }
+
+        .group {
+            margin-top: 10px;
+        }
+
+        button {
+            background-color: teal;
+            padding: 4px 20px;
+            color: white;
+            margin-top: 30px;
+            outline: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .group>div {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <div class="group">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" >
+            <div id="nameError"></div>
+        </div>
+        <div class="group">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email">
+            <div id="emailError"></div>
+        </div>
+        <div class="group">
+            <label for="contact">Contact</label>
+            <input type="tel" name="contact" id="contact">
+            <div id="contactError"></div>
+        </div>
+        <button type="submit">Submit</button>
+
+    </form>
+
+    <script>
+        var form = document.querySelector("form");
+
+        form.addEventListener(
+            "submit",
+            function (event) {
+                event.preventDefault();
+                var name = document.querySelector("#name").value.trim();
+                var email = document.querySelector("#email").value.trim();
+                var contact = document.querySelector("#contact").value.trim();
+                var nameError = document.querySelector("#nameError");
+                var emailError = document.querySelector("#emailError");
+                var contactError = document.querySelector("#contactError");
+                var emailReg = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+                var contactReg = /^[6-9]\d{9}$/
+
+                var errors = {};
+                if (!name) {
+                    errors.name = "Please Enter Your Name"
+
+                }
+
+                if (!email) {
+                    errors.email = "Please Enter Your Email"
+
+                } else if (!emailReg.test(email)) {
+                    errors.email = "Please Enter Valid Email"
+                }
+
+                if (!contact) {
+                    errors.contact = "Please Enter Your Contact Number"
+                } else if (!contactReg.test(contact)) {
+                    errors.contact = "Please Enter Valid Contact Number"
+                }
+                console.log(errors)
+
+                nameError.innerText = errors.name || "";
+                emailError.innerText = errors.email || "";
+                contactError.innerText = errors.contact || "";
+
+
+                if (Object.keys(errors).length == 0) {
+                    alert("Form Submited")
+                    form.reset()
+                }
+
+            }
+        )
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+            padding: 16px;
+        }
+
+        .box {
+            width: 18%;
+            height: 150px;
+            /* border: 2px solid green; */
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .overlay {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-color: green;
+            transform: scale(0);
+            transition: 0.6s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+            color: white;
+            text-decoration: underline;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+    </div>
+    <div class="overlay"></div>
+    <audio id="myaudio" src="music.wav"></audio>
+
+    <script>
+        var container = document.querySelector(".container");
+        var overlay = document.querySelector(".overlay");
+        var myaudio = document.querySelector("#myaudio");
+        var message = ["WELL DONE", "COPIED", "ROCK", "WELCOME ", "HELLO"]
+        for (var i = 1; i <= 20; i++) {
+            var box = document.createElement("div");
+            box.classList.add("box")
+            container.appendChild(box)
+
+            var r = parseInt(Math.random() * 256).toString(16).padStart(2, "0");
+            var g = parseInt(Math.random() * 256).toString(16).padStart(2, "0");
+            var b = parseInt(Math.random() * 256).toString(16).padStart(2, "0");
+            var code = "#" + r + g + b
+            box.style.background = code
+            box.innerText = code
+
+            box.addEventListener(
+                "click",
+                function (e) {
+                    navigator.clipboard.write(e.target.innerText)
+                    overlay.style.transform = "scale(1)"
+                    myaudio.play()
+                    overlay.style.background = e.target.innerText
+                    overlay.innerText = message[parseInt(Math.random() * message.length)]
+
+                    setTimeout(
+                        function () {
+                            overlay.style.transform = "scale(0)"
+                        },
+                        1000
+                    );
+
+                }
+            )
+
+
+        }
+
+    </script>
+
+</body>
+
+</html>
