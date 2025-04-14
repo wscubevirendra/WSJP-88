@@ -1,0 +1,29 @@
+header {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+header ul {
+    list-style: none;
+    color: #000000;
+    font-weight: 700;
+    font-size: 21px;
+}
+
+.circle {
+    width: 50px;
+    height: 50px;
+    background-color: #EBEEF6;
+}
+
+.cart-lenght {
+    width: 20px;
+    height: 20px;
+    background-color: #1ABA1A;
+    
+}
+

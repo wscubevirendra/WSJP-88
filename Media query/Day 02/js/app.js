@@ -1,6 +1,7 @@
 var toggleBtn = document.querySelector("#toggleBtn");
 var navBar = document.querySelector(".container nav ul ");
 var menuOverlay = document.querySelector(".menu-overlay");
+var closeBtn=document.querySelector("#closeBtn")
 console.log(menuOverlay)
 
 
@@ -9,6 +10,9 @@ toggleBtn.addEventListener(
     function () {
         navBar.classList.add("open");
         menuOverlay.classList.add("bg-overlay-open");
+        toggleBtn.style.display = "none"
+        closeBtn.style.display = "block"
+
     }
 )
 
@@ -17,6 +21,8 @@ menuOverlay.addEventListener(
     function () {
         navBar.classList.remove("open");
         menuOverlay.classList.remove("bg-overlay-open");
+         toggleBtn.style.display = "block"
+        closeBtn.style.display = "none"
 
     }
 )

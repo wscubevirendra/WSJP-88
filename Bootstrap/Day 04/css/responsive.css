@@ -1,0 +1,24 @@
+@media only screen and (min-width:0px) and (max-width:576px) {
+    .my-nav {
+        width: 50%;
+        height: 100vh;
+        background-color: black;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        color: white;
+        transition: 0.5s linear;
+
+    }
+
+    .my-nav ul{
+        flex-direction: column;
+        color: white;
+        
+    }
+
+    .show{
+        left: 0;
+    }
+}

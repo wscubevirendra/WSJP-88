@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 1300px;
+            /* border: 2px solid red; */
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .box {
+            width: calc(25% - 20px);
+            padding: 10px;
+            border: 2px solid green;
+        }
+
+        @media only screen and (min-width:0px) and (max-width:600px) {
+            .box {
+                flex: 1 1 calc(100% - 20px);
+            }
+        }
+
+        @media only screen and (min-width:600px) and (max-width:800px) {
+            .box {
+                flex: 1 1 calc(50% - 20px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni debitis natus exercitationem ipsa et ad
+            praesentium veritatis ipsam quo magnam autem impedit velit dignissimos tempore eum porro, obcaecati non.
+            Quis.
+        </div>
+        <div class="box">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio nisi ducimus hic reprehenderit cupiditate
+            obcaecati blanditiis aperiam, unde eius cum, doloribus soluta voluptatem quasi praesentium fugiat voluptas
+            reiciendis! Accusamus, voluptatum?
+        </div>
+        <div class="box">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus explicabo quibusdam ab corporis vero
+            laudantium dolore earum! Praesentium recusandae quo voluptatum rem odio nulla ullam ab cupiditate!
+            Perferendis, suscipit deleniti?
+        </div>
+        <div class="box">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, accusamus esse. Facere quisquam quis assumenda
+            ab dolorum sit! Quam consequatur laudantium eligendi? Culpa dicta voluptate illo a quisquam sit provident.
+        </div>
+        <div class="box">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda sapiente, quaerat facilis rerum magni
+            officia laudantium explicabo modi corrupti placeat amet id architecto, esse culpa totam? Quia, provident.
+            Inventore, atque!
+        </div>
+        <div class="box">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda sapiente, quaerat facilis rerum magni
+            officia laudantium explicabo modi corrupti placeat amet id architecto, esse culpa totam? Quia, provident.
+            Inventore, atque!
+        </div>
+        <div class="box">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda sapiente, quaerat facilis rerum magni
+            officia laudantium explicabo modi corrupti placeat amet id architecto, esse culpa totam? Quia, provident.
+            Inventore, atque!
+        </div>
+
+
+    </div>
+</body>
+
+</html>

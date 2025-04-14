@@ -128,3 +128,7 @@ a {
 .slick-prev:before, .slick-next:before{
     background-color: black;
 }
+
+#closeBtn{
+    display: none;
+}
