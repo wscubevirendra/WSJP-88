@@ -95,7 +95,6 @@
     </div>
 
     <script>
-
         var output = document.getElementsByClassName("output");
         var container = document.getElementsByClassName("container");
         var fontInp = document.getElementById("fontInp")
@@ -109,20 +108,15 @@
             } else if (flag == 2) {
                 message = "Message"
             }
-
-
             output[flag].innerText = `${message}:-${inp.value}`
-
         }
 
         function BgHandler(path) {
             container[1].style.background = `url(${path})`
-
         }
 
         function colorHandler(code) {
             container[1].style.color = code
-
         }
 
         var font = 16;
