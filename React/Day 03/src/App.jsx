@@ -1,61 +1,23 @@
-import React, { useState } from "react";
-import Card from "./Card";
+import { useState, useMemo } from 'react';
 
 function App() {
-  const [state, setState] = useState([
-    {
-      rating: 3,
-      title: "Pizza",
-      source: "https://cdn.dummyjson.com/recipe-images/2.webp"
-    },
-    {
-      rating: 5,
-      title: "Pizza",
-      source: "https://cdn.dummyjson.com/recipe-images/3.webp"
-    },
-    {
-      rating: 4,
-      title: "Pizza",
-      source: "https://cdn.dummyjson.com/recipe-images/4.webp"
-    },
-    {
-      rating: 2,
-      title: "Pizza",
-      source: "https://cdn.dummyjson.com/recipe-images/5.webp"
-    },
-    {
-      rating: 2,
-      title: "Pizza",
-      source: "https://cdn.dummyjson.com/recipe-images/5.webp"
-    },
-    {
-      rating: 2,
-      title: "Pizza",
-      source: "https://cdn.dummyjson.com/recipe-images/5.webp"
-    }
-  ])
+  const [count, setCount] = useState(0);
 
+  const result = useMemo(() => {
+    console.log("Calculating...");
+    let sum = 0;
+    for (let i = 0; i < 100000000; i++) sum += i;
+    return sum;
+  }, []); // empty dependency = calculate only once
 
-  const ShowData = state.map(
-    (data, index) => {
-      return <Card rating={data.rating} title={data.title} source={data.source} />
-    }
-  )
-}
-
-
-
-
-
-
-return (
-  <div className="container">
-    <div className="row">
-      {ShowData}
-
+  return (
+    <div>
+      <h2>Count: {count}</h2>
+      <button onClick={() => setCount(count + 1)}>Increase</button>
+      <p>Expensive Result: {result}</p>
     </div>
-  </div>
-)
+  );
+}
 
 
 export default App;
