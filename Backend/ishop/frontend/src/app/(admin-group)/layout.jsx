@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
 import SideMenu from "@/components/admin/SideMenu";
 import AdminHeader from "@/components/admin/Header";
+import { ToastContainer } from 'react-toastify';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,11 +25,24 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="grid grid-cols-4">
+        <ToastContainer
+          position="top-right"
+          autoClose={1000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick={false}
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="dark"
+        />
+        <div className="grid grid-cols-5">
+
           <div>
             <SideMenu />
           </div>
-          <div className="col-span-3 bg-gray-100 min-h-screen ">
+          <div className="col-span-4 bg-gray-100 min-h-screen ">
             <AdminHeader />
             {
               children
