@@ -15,7 +15,7 @@ const product = {
                     if (error) {
                         return errorResponse(res, "Unable to upload file")
                     } else {
-                        await categoryModel.create({ ...req.body, thumbnail: image });
+                        await ProductModel.create({ ...req.body, thumbnail: image });
                         return createdResponse(res, "Product create")
 
                     }
@@ -24,6 +24,7 @@ const product = {
             )
 
         } catch (error) {
+            console.log(error)
             return errorResponse(res, error.message)
         }
 
